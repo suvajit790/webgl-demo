@@ -1,20 +1,31 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      SL
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <div #renderContainer></div>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light">
+      <ion-icon md="caret-back" ios="chevron-back-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light" (click) ="animManager('a5')">A5</ion-fab-button>
+      <ion-fab-button color="light" (click) ="animManager('a4')">A4</ion-fab-button>
+      <ion-fab-button color="light" (click) ="animManager('a3')">A3</ion-fab-button>
+      <ion-fab-button color="light" (click) ="animManager('a2')">A2</ion-fab-button>
+      <ion-fab-button color="light" (click) ="animManager('a1')">A1</ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
 </ion-content>
